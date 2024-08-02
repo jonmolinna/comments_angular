@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CardComponent } from './components/card/card.component';
 import { SearchSuggestionsComponent } from './components/search-suggestions/search-suggestions.component';
+import { SuggestionsComponent } from './components/suggestions/suggestions.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { SearchSuggestionsComponent } from './components/search-suggestions/sear
     SidebarComponent,
     CardComponent,
     SearchSuggestionsComponent,
+    SuggestionsComponent,
   ],
   templateUrl: './app.component.html',
 })
