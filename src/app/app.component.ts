@@ -8,13 +8,7 @@ import { SuggestionsComponent } from './components/suggestions/suggestions.compo
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    SidebarComponent,
-    CardComponent,
-    SearchSuggestionsComponent,
-    SuggestionsComponent,
-  ],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
