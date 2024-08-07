@@ -1,11 +1,11 @@
 <div class="flex justify-center mt-10">
     <div class="w-full max-w-sm p-4 bg-white border border-gray-300 rounded-md shadow">
+        <h5 class="text-xl font-medium text-gray-900 text-center mb-5">
+            Crea tu cuenta
+        </h5>
         <form [formGroup]="initialForm" (ngSubmit)="handleSubmit($event)" class="space-y-6">
-            <h5 class="text-xl font-medium text-gray-900 text-center">
-                Crea tu cuenta
-            </h5>
-            <input type="text" placeholder="Nombres" formControlName="name"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md outline-none focus:ring-pink-500 focus:border-pink-500 block w-full p-2.5">
+            <app-input name="name" type="text" placeholder="Nombres" controlName="name"
+                (formControlChange)="handleFormControl('name', $event)" />
             <input type="email" placeholder="Email" formControlName="email"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md outline-none focus:ring-pink-500 focus:border-pink-500 block w-full p-2.5">
             <input type="password" placeholder="Contraseña" formControlName="password"

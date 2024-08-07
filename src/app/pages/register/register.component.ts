@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import { InputComponent } from '../../components/forms/input/input.component';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, InputComponent],
   templateUrl: './register.component.html',
 })
 export class RegisterComponent {
@@ -17,6 +23,10 @@ export class RegisterComponent {
       password: [''],
       confirmPassword: [''],
     });
+  }
+
+  handleFormControl(formControlName: string, formControl: FormControl) {
+    this.initialForm.setControl(formControlName, formControl);
   }
 
   handleSubmit(event: Event) {
